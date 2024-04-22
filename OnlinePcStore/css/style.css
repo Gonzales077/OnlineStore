@@ -1,0 +1,384 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.logo {
+    display: inline-block; /* Ensure the logo behaves like an inline element */
+    margin-right: 10px; /* Add some space to the right of the logo */
+}
+
+.logo img {
+    max-width: 180px; /* Set the maximum width of the logo image */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the image vertically in the middle */
+}
+
+
+.header {
+    background-color: green;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar {
+    display: none;
+}
+
+.top-navbar {
+    background-color: green;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top-navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px; /* Add margin here */
+    margin-top: 10px;
+}
+
+.top-navbar a:not(:last-child) {
+    margin-right: 130px; /* Larger margin between links */
+}
+
+.top-navbar a:hover {
+    text-decoration: underline;
+}
+
+
+/* Home Section */
+.home {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.home h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Products Section */
+.products {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product .content {
+    font-size: 1.2rem;
+}
+
+.product span {
+    font-weight: bold;
+    color: #f39c12;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about .row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .image {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.about .content {
+    text-align: left;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer .box-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer .box {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #fff;
+}
+
+/* Cart styles */
+.cart {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Hide the cart by default */
+    height: 100vh;
+    width: 400px;
+    background-color: white;
+    z-index: 1500;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.cart.open {
+    right: 0; /* Show the cart when it's open */
+}
+
+.cart__close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart__title-center {
+    text-align: center;
+    color: green;
+}
+
+.cart__container {
+    margin-top: 20px;
+}
+
+.cart__card {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.cart__box {
+    flex: 0 0 30%;
+    margin-right: 20px;
+}
+
+.cart__img {
+    width: 100%;
+    height: auto;
+}
+
+.cart__details {
+    flex: 1;
+    color: black    ;
+}
+
+.cart__price {
+    color: black;
+}
+
+.cart__amount {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cart__amount-content {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.cart__amount-number {
+    margin: 0 10px;
+}
+
+.cart__prices {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* Cart icon styles */
+.cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    margin-right: 40px; /* Add space between the cart icon and the "Home" link */
+}
+
+.featuredcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.featuredcard {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.featuredcard:hover {
+    transform: translateY(-5px);
+}
+
+.featuredcard img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.featureddata {
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+.featuredtitle {
+    font-size: 1.2rem; /* Adjust font size as needed */
+    margin-bottom: 5px;
+}
+
+.featuredprice {
+    font-size: 1.1rem; /* Adjust font size as needed */
+    color: #f39c12;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.featuredbutton {
+    font-size: 1rem; /* Adjust font size as needed */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.featuredbutton:hover {
+    background-color: #555;
+}
